@@ -11,15 +11,5 @@ class Product {
     await assertBrowserUrl("/inventory.html");
   }
 
-  async addProductToCart(productName) {
-    await elementScrollIntoClick(await ProductPage.inventoryItemName(productName));
-    await elementScrollIntoClick(await ProductPage.addToCartButton(productName));
-  }
-
-  async removeProductFromCart(productName) {
-    await elementScrollIntoClick(await ProductPage.inventoryItemName(productName));
-    await elementScrollIntoClick(await ProductPage.addToCartButton(productName));
-  }
-
 }
 export default new Product();
